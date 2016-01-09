@@ -1,0 +1,9 @@
+﻿@using BlogIT.Models
+@model IEnumerable<Comment>
+@{
+    ViewBag.Title = "CheckPrivateMessages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Check Private Messages</h2>
+ @Html.Partial("~/Views/Comment/Comments.cshtml", Model)

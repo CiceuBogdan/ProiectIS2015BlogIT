@@ -1,0 +1,19 @@
+﻿@using BlogIT.Models;
+@model IEnumerable<Comment>
+
+<div id="AddCommentUrl" data-url="@Url.Action("Add", "Comment")"></div>
+<div class="spacer-20">
+    @foreach (Comment comment in Model)
+    {
+        <div class="well">
+            Comment <strong>@comment.Subject</strong> by <strong>@comment.EmailSender </strong>
+
+            <div class="lead">
+                @comment.Content
+            </div>
+        </div>
+           
+    }
+</div>
+
+

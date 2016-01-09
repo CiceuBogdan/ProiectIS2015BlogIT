@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Latest articles:</h2>
+<div class="inner-container">
+</div>
+@foreach (BlogIT.Models.ArticleModel art in ViewBag.Articles)
+{
+    <fieldset class="">
+        <legend class="article-border">@art.Title</legend>
+        <div class="control-group">
+              <a href="Article/article?articleId=@art.Id">
+            <label class="control-label input-label" for="startTime">@art.Content</label>
+           </a>
+        </div>
+         <p class="post-meta">
+                Category: @art.CategoryName, Date: @art.Date
+            </p>
+    </fieldset>
+        
+}

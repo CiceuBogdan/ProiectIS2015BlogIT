@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "LoginWriter";
+    ViewBag.IsWriter = false;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LoginWriter</h2>
+@using (Html.BeginForm()){
+    @Html.ValidationSummary();
+    <div class="editor-label">
+        @Html.Label("Password:")
+    </div>
+    <div class="editor-field">
+           @Html.Password("Password")
+    </div>
+    <div>
+    <input type="submit" class="btn btn-success " value="log In">
+    </div>
+}
+    
